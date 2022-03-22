@@ -1,11 +1,14 @@
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #000;
     font-family: sans-serif;
 }
 
 .container{
     width: 80%;
-    margin: 30px 30px;
+    margin: 10px 70px;
     background: #fff;
     padding: 20px;
     align-items: center;
@@ -58,4 +61,7 @@ select{
 }
 .color{
     background:yellow;
+}
+span{
+    margin-bottom: 10px;
 }
