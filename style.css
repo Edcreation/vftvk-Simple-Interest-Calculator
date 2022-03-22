@@ -1,18 +1,19 @@
 body{
     background: #000;
+    font-family: sans-serif;
 }
 
 .container{
     width: 80%;
-    margin: 30px 100px;
+    margin: 30px 30px;
     background: #fff;
     padding: 20px;
-    font-family: sans-serif;
     align-items: center;
     border-radius: 15px;
 }
 .container h1{
     display: flex;
+    font-family: Verdana;
     align-items: center;
     justify-content: center;
     color: rgba(0, 0, 0, 0.514);
@@ -39,7 +40,7 @@ input{
     align-items: flex-end;
     margin-left: 40px;
 }
-input[type=range]{
+input[type=range],select{
 margin-left: 9px;
 width: 170px;
 }
@@ -51,4 +52,10 @@ input[type=number]
 button{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+select{
+    width: 40px;
+}
+.color{
+    background:yellow;
 }

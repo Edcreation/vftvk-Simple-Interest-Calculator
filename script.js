@@ -4,19 +4,36 @@ function compute()
     r = document.getElementById("rate").value;
     y = document.getElementById("years").value;
 
+
+
+
+    dt = new Date().getFullYear();
     res = document.getElementById("result");
-
     res = p*(r/100)*y;
-    const cyear= 2022+y;
-    
-    var principal= "If you deposit "+ p +"."
-    var interest =  "at an interest rate of "+ r +"%." 
-    var ans = "You will receive an amount of " + res +","
-    var time = " in the year " +(cyear) ;
-    document.getElementById("principle").textContent = principal;
-    document.getElementById("interest").textContent = interest;
-    document.getElementById("ans").textContent = ans;
-    document.getElementById("time").textContent = time;
+    const cyear= dt + parseInt(y);
 
-    
+
+    var result = document.getElementById("result");
+    result.innerHTML = "If you deposit " + "<span class='color'>" + p + "</span>,"  + "<br> at an interest rate of "+ "<span class='color'>" + r + "%.</span>" + "<br> You will receive an amount of " + "<span class='color'>" + res + "</span>" + ", <br> in the year " + "<span class='color'>" + cyear + "</span>";
+}
+function myFunction(selector)
+{
+   var optionList=""
+    var i;
+    for (i=1;i<=100;i++){
+      selector.options[i-1] = new Option(optionList+i);
+    }
+}
+myFunction(document.getElementById("years"));
+
+function range()
+{
+    var slider= document.getElementById("rate");
+    var output= document.getElementById("output");
+
+    output.innerHTML = slider.value;
+
+    slider.oninput = function(){
+        output.innerHTML = this.value;
+    }
 }
