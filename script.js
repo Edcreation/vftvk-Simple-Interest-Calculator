@@ -3,6 +3,14 @@ function compute()
     p = document.getElementById("principal").value;
     r = document.getElementById("rate").value;
     y = document.getElementById("years").value;
+    
+
+    if(p<1 || p=="")
+    {
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+    }
+    else{
 
 
 
@@ -11,10 +19,11 @@ function compute()
     res = document.getElementById("result");
     res = p*(r/100)*y;
     const cyear= dt + parseInt(y);
-
+    
 
     var result = document.getElementById("result");
     result.innerHTML = "If you deposit " + "<span class='color'>" + p + "</span>,"  + "<br> at an interest rate of "+ "<span class='color'>" + r + "%.</span>" + "<br> You will receive an amount of " + "<span class='color'>" + res + "</span>" + ", <br> in the year " + "<span class='color'>" + cyear + "</span>";
+}
 }
 function myFunction(selector)
 {
